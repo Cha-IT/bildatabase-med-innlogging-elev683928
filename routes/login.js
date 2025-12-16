@@ -16,7 +16,8 @@ router.post('/', async (req, res) => {
         return res.status(401).json({ message: "Feil epost eller passord" });        
     }
 
-    const passordErGyldig = passord === bruker.passord;
+    // bruk bcrypt for å sammenligne med hashet passord
+    const passordErGyldig = await bcrypt.compare(passord, bruker.passord);
     if (!passordErGyldig) {
         return res.status(401).json({message: "Feil epost eller passord" })
     }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrer bruker</title>
+</head>
+<body>
+    <h1>Registrer ny bruker</h1>
+    <form id="signupForm">
+        <div>
+            <label for="fornavn">Fornavn:</label>
+            <input type="text" id="fornavn" name="fornavn" required>
+        </div>
+        <div>
+            <label for="epost">Epost:</label>
+            <input type="email" id="epost" name="epost" required>
+        </div>
+        <div>
+            <label for="passord">Passord:</label>
+            <input type="password" id="passord" name="passord" required>
+        </div>
+        <button type="submit">Registrer</button>
+    </form>
+
+    <p id="melding" aria-live="polite"></p>
+
+    <script src="./javascripts/signupHandler.js"></script>
+</body>
+</html>
