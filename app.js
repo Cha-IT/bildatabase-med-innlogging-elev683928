@@ -12,6 +12,7 @@ const usersRouter = require('./routes/users');
 const personerRouter = require('./routes/personer');
 const bilerRouter = require('./routes/biler');
 const loginRouter = require('./routes/login');
+const signupRouter = require('./routes/signup');
 const beskyttetRouter = require('./routes/beskyttet');
 const logoutRouter = require('./routes/logout')
 
@@ -37,6 +38,7 @@ app.use('/users', usersRouter);
 app.use('/personer', personerRouter);
 app.use('/biler', bilerRouter);
 app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 app.use('/beskyttet', beskyttetRouter);
 app.use('/logout', logoutRouter);
 
